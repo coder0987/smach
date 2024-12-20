@@ -1,6 +1,5 @@
 import { topbarLinks } from '@/constants';
-import React from 'react'
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Topbar = () => {
 
@@ -11,7 +10,7 @@ const Topbar = () => {
             <div className='flex flex-row gap-3 py-4 px-3 justify-center'>
                 <ul className='flex flex-row justify-around md:justify-evenly gap-3 ml-2 w-full md:w-1/2'> {/*flex-row gap-3 ml-2 hidden md:flex*/}
                     {topbarLinks.map((link: { label: string; route: string }) => {
-                        const isActive = pathname === link.route;
+                        const isActive = (link.route === '/' ? pathname === link.route : pathname.includes(link.route));
                         return (
                             <NavLink
                                     to={link.route}
