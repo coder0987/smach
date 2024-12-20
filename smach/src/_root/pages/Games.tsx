@@ -6,6 +6,7 @@ const Games = () => {
             <div className="flex flex-col justify-start items-center gap-4 w-full md:w-3/4">
                 <h1 className="header h1-bold text-center">Games</h1>
                 <div className="flex flex-row gap-4">
+                    <Link className="main-link" to="/games/ScoreTracker">Score Tracker</Link>
                     <Link className="main-link" to="https://machtarok.com/">Taroky</Link>
                 </div>
             </div>
