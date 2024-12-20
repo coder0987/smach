@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import '@/index.css'
 
 import RootLayout from '@/_root/RootLayout'
+import ScoreTracker from './_root/pages/ScoreTracker'
 import { Home, GamesRoot, Games, Other, NotFound, PointTracker } from '@/_root/pages'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
             <Route path="/other" element={<Other />} />
             <Route path="/games" element={<Games />} />
             <Route path="/games" element={<GamesRoot />}>
+              <Route index element={<Games />} />
               <Route path="/games/PointTracker" element={<PointTracker />} />
             </Route>
             <Route path="*" element={<NotFound />} />
